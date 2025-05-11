@@ -21,6 +21,7 @@ export const SearchInput = forwardRef<HTMLTextAreaElement, SearchInputProps>(
           autosize
           minRows={1}
           maxRows={4}
+          p={1}
           leftSection={
             <ActionIcon variant="subtle" color="gray" size="lg">
               <Search size={20} />
