@@ -1,9 +1,8 @@
-import AppShell from './_components/AppShell'
-import '@mantine/core/styles.css';
+import Homepage from './Home/page';
 
 export default function Home() {
 
   return (
-    <AppShell/>
+      <Homepage />
   );
 }

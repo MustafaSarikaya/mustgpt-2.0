@@ -20,7 +20,7 @@ export function QuestionCarousel({ questions, onQuestionSelect }: QuestionCarous
   return (
     // <Box w="100%" maw={800} px={{base: 0, sm: 'md'}} >
       <Carousel
-        w={{ base:'100dvw', sm:'60dvw', md:'50dvw' }}
+        w={{ base:'100dvw', sm:'65dvw', md:'60dvw' }}
         slideSize='200px'
         withControls
         withIndicators

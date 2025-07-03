@@ -5,28 +5,28 @@ import { createTheme, rem } from '@mantine/core';
 const theme = createTheme({
   colors: {
     primary: [
-      '#FDF9E2',
-      '#F7F0C5',
-      '#F1E7A8',
-      '#EBE08B',
-      '#E5D76E',
-      '#E8C926', // Primary color at index 5
-      '#D1B422',
-      '#BA9F1E',
-      '#A38B1A',
-      '#8C7616',
+      "#fffce1",
+      "#fdf8cd",
+      "#f9f09f",
+      "#f5e76c",
+      "#f2df3a",
+      "#f1dc26",
+      "#f0da13",
+      "#d5c000",
+      "#bdab00",
+      "#a39300"
     ],
     secondary: [
-      '#E3EBE6',
-      '#C7D7CD',
-      '#ABB3B4',
-      '#8F9F9B',
-      '#738B82',
-      '#265C3B', // Secondary color at index 5
-      '#224F32',
-      '#1E4229',
-      '#1A3520',
-      '#162817',
+      "#e6f6ff",
+      "#d0e9ff",
+      "#a0d1fb",
+      "#6db8fa",
+      "#45a2f8",
+      "#3094f8",
+      "#238ef9",
+      "#167ade",
+      "#026cc6",
+      "#005eb0"
     ],
     accent: [
       '#FFFFFF', // Light text / accent at index 0
@@ -42,12 +42,12 @@ const theme = createTheme({
     ],
   },
 
-  primaryColor: 'primary',
+  // primaryColor: 'primary',
   defaultRadius: 'lg',
-  white: '#FFFFFF',
+  white: '#F6F6F6',
   black: '#171717',
 
-  fontFamily: 'Montserrat, sans-serif',
+  fontFamily: 'Montserrat Medium, sans-serif',
   
   headings: {
     fontFamily: 'Calistoga, serif',
@@ -57,8 +57,7 @@ const theme = createTheme({
 
 
   other: {
-    accentFontFamily: 'Montserrat Medium, sans-serif',
-    backgroundColor: '#F7F5EF',
+    backgroundColor: '#F6F6F6',
   },
 });
 

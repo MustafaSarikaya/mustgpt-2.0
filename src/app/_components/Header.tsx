@@ -1,5 +1,6 @@
 'use client'
 import { ActionIcon, Avatar, Group, Popover, Stack, Title } from "@mantine/core";
+import Link from "next/link";
 import React, { useState } from "react";
 import { Calendar, GitHub, Linkedin, MoreVertical, Sidebar, Twitter } from "react-feather";
 
@@ -15,7 +16,9 @@ export default function Header({ opened, toggleOpened }: HeaderProps) {
             {!opened && <ActionIcon variant="subtle" size="lg" onClick={toggleOpened}>
                 <Sidebar size={24} color='black' />
               </ActionIcon>}
-            <Title>MustGPT</Title>
+            <Link href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Title>MustGPT</Title>
+            </Link>
           </Group>
           <Group>
             <Group visibleFrom="sm">

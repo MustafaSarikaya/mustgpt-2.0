@@ -13,7 +13,7 @@ interface SearchInputProps extends ComponentPropsWithoutRef<typeof Textarea> {
 export const SearchInput = forwardRef<HTMLTextAreaElement, SearchInputProps>(
   ({ onMicClick, onCalendarClick, ...props }, ref) => {
     return (
-      <Box w={{base: '95dvw', sm:'60dvw', md:'50dvw'}}>
+      <Box w={{base: '90dvw', sm:'65dvw', md:'60dvw'}}>
         <Textarea
           ref={ref}
           size="lg"
@@ -21,7 +21,16 @@ export const SearchInput = forwardRef<HTMLTextAreaElement, SearchInputProps>(
           autosize
           minRows={1}
           maxRows={4}
+          radius={'lg'}
           p={1}
+          styles={{
+            input: {
+              '&:focus': {
+                outline: '2px solid var(--mantine-color-primary-5)',
+                outlineOffset: '-2px'
+              }
+            }
+          }}
           leftSection={
             <ActionIcon variant="subtle" color="gray" size="lg">
               <Search size={20} />

@@ -5,9 +5,12 @@ import { type Metadata } from "next";
 import { TRPCReactProvider } from "@/trpc/react";
 import { MantineProvider } from "@mantine/core";
 import { ColorSchemeScript } from "@mantine/core";
+import AppShell from './_components/AppShell'
 import theme from "./theme";
 import { Calistoga } from 'next/font/google'
 import '@mantine/carousel/styles.css';
+import '@mantine/core/styles.css';
+
 
 export const metadata: Metadata = {
   title: "MustGPT",
@@ -39,7 +42,9 @@ export default function RootLayout({
       <body>
         <TRPCReactProvider>
           <MantineProvider theme={theme} >
-          {children}
+            <AppShell>
+              {children}
+            </AppShell>
           </MantineProvider>
         </TRPCReactProvider>
       </body>
