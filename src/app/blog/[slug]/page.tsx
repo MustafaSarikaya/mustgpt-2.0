@@ -11,6 +11,7 @@ interface BlogPostPageProps {
   params: {
     slug: string;
   };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
