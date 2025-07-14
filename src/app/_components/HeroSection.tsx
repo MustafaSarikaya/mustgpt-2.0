@@ -4,8 +4,8 @@ import { Title, Text, rem, Group, Avatar, Stack, Flex, Box } from '@mantine/core
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { animate } from 'motion';
-import { SearchInput } from '@/app/_components/SearchInput';
-import { QuestionCarousel } from '@/app/_components/QuestionCarousel';
+import { SearchInput } from '@/src/app/_components/SearchInput';
+import { QuestionCarousel } from '@/src/app/_components/QuestionCarousel';
 
 const quickQuestions = [
     {

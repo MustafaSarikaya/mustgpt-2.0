@@ -2,7 +2,7 @@
 
 
 import { Stack, Text, Button, ScrollArea, Title, Box } from '@mantine/core';
-import { api } from '@/trpc/react';
+import { api } from '@/src/trpc/react';
 import Link from 'next/link';
 import { useMediaQuery } from '@mantine/hooks';
 import { motion } from 'motion/react';

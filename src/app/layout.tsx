@@ -1,8 +1,8 @@
-import "@/styles/globals.css";
+import "@/src/styles/globals.css";
 
 import { type Metadata } from "next";
 
-import { TRPCReactProvider } from "@/trpc/react";
+import { TRPCReactProvider } from "@/src/trpc/react";
 import { MantineProvider } from "@mantine/core";
 import { ColorSchemeScript } from "@mantine/core";
 import AppShell from './_components/AppShell'

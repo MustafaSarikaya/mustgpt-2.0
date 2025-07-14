@@ -27,6 +27,7 @@
     "@trpc/server": "^11.0.0",
     "motion": "^12.10.1",
     "next": "^15.2.3",
+    "openai": "^5.8.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-feather": "^2.0.10",

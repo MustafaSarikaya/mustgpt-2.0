@@ -1,11 +1,11 @@
 import { z } from "zod";
 import { Client } from "@notionhq/client";
 import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { createTRPCRouter, publicProcedure } from "@/server/api/trpc";
+import { createTRPCRouter, publicProcedure } from "@/src/server/api/trpc";
 import { TRPCError } from "@trpc/server";
 import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { notionBlockToHtml } from "@/utils/notionToHtml";
-import { slugify } from "@/utils/slugify";
+import { notionBlockToHtml } from "@/src/utils/notionToHtml";
+import { slugify } from "@/src/utils/slugify";
 
 type NotionPost = {
   id: string;

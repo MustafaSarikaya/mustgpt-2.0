@@ -2,19 +2,33 @@
 
 import { Textarea, ActionIcon, Box, Group } from '@mantine/core';
 import { Search, Mic, Calendar } from 'react-feather';
-import { forwardRef } from 'react';
+import { forwardRef, KeyboardEvent } from 'react';
 import type { ComponentPropsWithoutRef } from 'react';
+import { useRouter } from 'next/navigation';
 
 interface SearchInputProps extends ComponentPropsWithoutRef<typeof Textarea> {
   onMicClick?: () => void;
   onCalendarClick?: () => void;
+  initialMessage?: string;
 }
 
 export const SearchInput = forwardRef<HTMLTextAreaElement, SearchInputProps>(
-  ({ onMicClick, onCalendarClick, ...props }, ref) => {
+  ({ onMicClick, onCalendarClick, initialMessage = '', ...props }, ref) => {
+    const router = useRouter();
     return (
       <Box w={{base: '90dvw', sm:'65dvw', md:'60dvw'}}>
         <Textarea
+          onKeyDown={(e: KeyboardEvent<HTMLTextAreaElement>) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              const message = (e.target as HTMLTextAreaElement).value.trim();
+              if (message) {
+                const searchParams = new URLSearchParams();
+                searchParams.set('message', message);
+                router.push(`/chat?${searchParams.toString()}`);
+              }
+            }
+          }}
           ref={ref}
           size="lg"
           placeholder="Let's chat!"
