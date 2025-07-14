@@ -2,7 +2,7 @@
 
 import { Box, Container, Space, SimpleGrid, Stack, Text, Title, Skeleton, Button } from '@mantine/core';
 import { BlogCard } from './BlogCard';
-import { api } from '@/trpc/react';
+import { api } from '@/src/trpc/react';
 
 type BlogPost = {
   id: string | number;
