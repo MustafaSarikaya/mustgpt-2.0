@@ -7,11 +7,11 @@ import Footer from '../../_components/Footer';
 import { BlogCard } from '../../_components/BlogCard';
 import { SimpleGrid } from '@mantine/core';
 
-interface BlogPostPageProps {
+type BlogPostPageProps = {
   params: {
     slug: string;
   };
-  searchParams?: { [key: string]: string | string[] | undefined };
+  searchParams?: Record<string, string | string[] | undefined>;
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
@@ -138,8 +138,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   category: relatedPost.tags[0]?.name ?? 'General',
                   image: relatedPost.coverImage,
                   date: new Date(relatedPost.publishedAt).toLocaleDateString(),
-
-
+                  slug: relatedPost.slug,
                   author: {
                     name: 'Mustafa Sarikaya',
                     avatar: '/profile-pic.jpeg'
